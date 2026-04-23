@@ -8,6 +8,8 @@ jobs:
             run:
                 working-directory: backend
         steps: 
+            - name: Repo Cloning 
+              uses: actions/checkout@v4
             - name: install dependencies 
               run : npm ci
             -  name:  run test
