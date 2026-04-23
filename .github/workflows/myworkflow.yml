@@ -4,6 +4,11 @@ on:
 jobs:
     print:
         runs-on: macOS-latest
+        defaults:
+            run:
+                working-directory: backend
         steps: 
-            -  name:  Print Hellp 
-               run : echo "Hello World"
+            - name: install dependencies 
+              run : npm ci
+            -  name:  run test
+               run : npm test
